@@ -28,21 +28,14 @@
 			<th>TEMPRATURE</th>
             <th>HUMIDITY</th>
 		</tr>
+        {% for i in data %}
 		<tr>
-			<td>Row 1, Column 1</td>
-			<td>Row 1, Column 2</td>
-            <td>Row 1, Column 3</td>
+            <td>{{ i.time_red}}</td>
+			<td>{{ i.temprature}}</td>
+            <td>{{ i.humidity}}</td>
+		
 		</tr>
-		<tr>
-			<td>Row 2, Column 1</td>
-			<td>Row 2, Column 2</td>
-            <td>Row 2, Column 3</td>
-		</tr>
-		<tr>
-			<td>Row 3, Column 1</td>
-			<td>Row 3, Column 2</td>
-            <td>Row 3, Column 3</td>
-		</tr>
+        {%endfor%}
 	</table>
 
 </div>
@@ -52,9 +45,6 @@
 <input style="background-color: crimson;"type="submit"value="REGENERATE">
 
 </form>
-</div>
-
-
-    
+</div>    
 </body>
 </html>
